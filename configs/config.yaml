@@ -1,0 +1,43 @@
+# 服务配置
+server:
+  run-mode: debug # 运行模式：release，debug，test
+  http-port: 8000 # http监听端口
+  read-timeout: 60 # 允许读取的最大持续时间
+  write-timeout: 60 # 允许写入的最大持续时间
+
+# 应用配置
+app:
+  log-save-path: runtime/logs # 日志文件存储位置
+  log-file-ext: .log # 日志文件后缀
+
+# 数据库配置
+database:
+  db-driver: mysql # 数据库驱动
+  username: root # 数据库账号
+  password: 123456 # 数据库密码
+  host: 127.0.0.1:3306 # 数据库地址
+  db-name: gin_app # 数据库名称
+  table-prefix: app_ # 数据表前缀
+  charset: utf8mb4 # 数据库字符集
+  parse-time: True
+  max-idle-connections: 10 # 最大空闲连接数
+  max-open-connections: 30 # 最大打开的连接数
+  log-level: error # 日志记录等级
+  log-file-name: mysql # 日志文件名
+  log-file-ext: .log # 日志文件后缀
+  log-max-age: 30 # 文件保留最大天数
+
+# Redis配置
+redis:
+  host: 127.0.0.1 # redis地址
+  port: 6379 # 端口
+  password: #密码
+  db: 0 # 使用的数据库
+
+# 日志配置
+log:
+  level: debug # 日志记录等级
+  file-name: app # 文件名
+  file-ext: .log # 文件后缀
+  show-line: True # 是否显示日志调用行
+  max-age: 30 # 文件最大保留天数
